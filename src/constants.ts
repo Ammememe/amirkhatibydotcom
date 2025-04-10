@@ -1,9 +1,12 @@
 export const education = [
   {
     name: "Jensens Yrkeshögskola",
-    pos: "Cloud Developer AWS",
+    nameSv: "Jensens Yrkeshögskola",
+    pos: "Cloud Development with AWS",
+    posSv: "Molnutveckling med AWS",
     duration: "Jan 2022 - Jun 2024",
-    title: "Specialized vocational education focused on AWS cloud development and solutions.",
+    title: "Education focused on development and operation of solutions in Amazon Web Services (AWS).",
+    titleSv: "Yrkeshögskoleutbildning med inriktning på utveckling och drift av lösningar i Amazon Web Services (AWS).",
     icon: "/assets/jensens.png",
     bulletPoints: [
       "I developed specialized skills in Java application development, focusing on deployment and management within the Amazon Web Services (AWS) ecosystem.",
@@ -21,9 +24,12 @@ export const education = [
   },
   {
     name: "IT-Högskolan",
-    pos: "Cloud Development with Azure",
+    nameSv: "IT-Högskolan",
+    pos: "Cloud Development Azure",
+    posSv: "Molnutveckling Azure",
     duration: "Sep 2024 - Dec 2024",
-    title: "Focused training on Microsoft Azure cloud platform services and development.",
+    title: "Education focused on Microsoft Azure cloud platform services and development.",
+    titleSv: "Utbildning med fokus på Microsoft Azure molnplattformstjänster och utveckling.",
     icon: "/assets/ithogskola.png",
     bulletPoints: [
       "I developed in-depth knowledge of Microsoft Azure, covering its core services, concepts like serverless computing and Azure Functions, service models (PaaS, IaaS, SaaS), and identity management with Azure Active Directory.",
@@ -40,9 +46,12 @@ export const education = [
   },
   {
     name: "YH-Akademin",
+    nameSv: "YH-Akademin",
     pos: "Cloud Native Computing",
+    posSv: "Cloud Native Computing",
     duration: "Sep 2024 - Jan 2025",
-    title: "Education in modern cloud-native technologies including containers and orchestration.",
+    title: "Education focused on container technology, microservices, and cloud-native architecture.",
+    titleSv: "Utbildning med fokus på containerteknik, mikrotjänster och cloud-native-arkitektur.",
     icon: "/assets/yh.png",
     bulletPoints: [
       "I developed a foundational understanding of cloud services, covering both theoretical concepts and the practical differences between various cloud service types.",
@@ -59,9 +68,12 @@ export const education = [
   },
   {
     name: "Umeå University",
-    pos: "Linux as a development environment",
+    nameSv: "Umeå Universitet",
+    pos: "Linux as a Development Environment",
+    posSv: "Linux som utvecklingsmiljö",
     duration: "Jan 2025 - April 2025",
-    title: "University course covering the Linux operating system for software development purposes.",
+    title: "University course on the Linux operating system for software development.",
+    titleSv: "Universitetskurs om Linux-operativsystemet för programutveckling.",
     icon: "/assets/umeå.png",
     bulletPoints: [
       "I learned how to manage and get around in Linux systems using the command line, especially for software development tasks.",
@@ -78,10 +90,13 @@ export const education = [
     ]
   },
   {
-    name: "Mälardalens University",
+    name: "Mälardalen University",
+    nameSv: "Mälardalens Universitet",
     pos: "Computer Networks",
+    posSv: "Datornätverk",
     duration: "Jan 2025 - April 2025",
-    title: "University course focused on the principles and technologies of computer networking.",
+    title: "University course in network technology focusing on design, configuration, and security.",
+    titleSv: "Universitetskurs i nätverksteknik med fokus på design, konfiguration och säkerhet.",
     icon: "/assets/mdu.png",
     bulletPoints: [
       "I am learning to configure and secure computer networks, focusing on routers and switches, hierarchical network design, and creating network topologies.",

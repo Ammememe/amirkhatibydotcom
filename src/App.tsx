@@ -523,11 +523,15 @@ function App() {
                   </div>
                   
                   <div className="flex-1">
-                    <p className={`font-bold text-xl ${theme === 'light' ? 'text-black/80 group-hover:text-black' : 'text-white/80 group-hover:text-white'} transition-all duration-300`}>{item.name}</p>
-                    <p className={`text-sm mb-3 ${theme === 'light' ? 'text-gray-600 group-hover:text-gray-800' : 'text-gray-400 group-hover:text-gray-300'} transition-all duration-300`}>
-                      {item.pos} -- <span>{item.duration}</span>
+                    <p className={`font-bold text-xl ${theme === 'light' ? 'text-black/80 group-hover:text-black' : 'text-white/80 group-hover:text-white'} transition-all duration-300`}>
+                      {theme === 'light' ? item.nameSv : item.name}
                     </p>
-                    <p className={`${theme === 'light' ? 'text-gray-700 group-hover:text-black' : 'text-gray-500 group-hover:text-white'} transition-all duration-300 mb-3`}>{item.title}</p>
+                    <p className={`text-sm mb-3 ${theme === 'light' ? 'text-gray-600 group-hover:text-gray-800' : 'text-gray-400 group-hover:text-gray-300'} transition-all duration-300`}>
+                      {theme === 'light' ? item.posSv : item.pos} -- <span>{item.duration}</span>
+                    </p>
+                    <p className={`${theme === 'light' ? 'text-gray-700 group-hover:text-black' : 'text-gray-500 group-hover:text-white'} transition-all duration-300 mb-3`}>
+                      {theme === 'light' ? item.titleSv : item.title}
+                    </p>
                     
                     {/* Display bullet points if they exist */}
                     {item.bulletPoints && (
