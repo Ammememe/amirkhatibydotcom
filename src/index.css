@@ -28,3 +28,22 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Background images for project cards */
+.bg-spotlight1 {
+  background-image: url('/assets/spotlight1.png');
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-opacity: 0.1;
+}
+
+.bg-spotlight2 {
+  background-image: url('/assets/spotlight2.png');
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-opacity: 0.1;
+}

@@ -16,7 +16,7 @@ const ChatBox: React.FC = () => {
   const { theme } = useTheme();
   
   const initialMessage = theme === 'light' 
-    ? "Jag är Amirs AI assistent, om du har några ytterligare frågor" 
+    ? "If you have any further questions about Amir, please feel free to ask me." 
     : "I am Amirs Assistant, do you have any further questions please feel free to ask me";
   
   const [messages, setMessages] = useState<Message[]>([

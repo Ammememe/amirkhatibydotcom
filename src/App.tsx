@@ -237,9 +237,9 @@ function App() {
       title: theme === 'light' ? "Projekt" : "Projects",
       content: (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          <div className={`bg-white/10 backdrop-blur-md rounded-lg p-8 shadow-xl`}>
-            <div className="flex flex-col gap-5 relative">
-              <div className={`flex flex-col gap-5 ${theme === 'light' ? 'text-black' : 'text-white'} my-5 z-10`}>
+          <div className={`bg-white/10 backdrop-blur-md rounded-lg p-8 shadow-xl relative overflow-hidden ${theme === 'light' ? 'bg-spotlight1' : 'bg-spotlight2'}`}>
+            <div className="flex flex-col gap-5 relative z-10">
+              <div className={`flex flex-col gap-5 ${theme === 'light' ? 'text-black' : 'text-white'} my-5`}>
                 <div className="flex justify-between items-start">
                   <h3 className="text-2xl font-bold mb-2">{currentProject.title}</h3>
                   {/* Live/Besök button for projects with live links */}
