@@ -10,6 +10,13 @@ export const education = [
       "I developed a broad understanding of cloud computing principles (IaaS, PaaS, SaaS), related IT domains like web development, databases, and security, and alternative cloud platforms.",
       "I developed proficiency in modern development methodologies such as Agile and DevOps, alongside the ability to independently manage projects.",
       "I developed strong analytical and problem-solving capabilities, gaining a deep understanding of how to approach and find effective solutions for complex technical challenges, especially within Java development on AWS."
+    ],
+    bulletPointsSv: [
+      "Arbetade med utveckling av Java-applikationer och lärde mig hur man bygger, hanterar och publicerar dem i AWS.",
+      "Fick förståelse för molntjänstemodeller (IaaS, PaaS, SaaS) och hur de används i olika typer av IT-lösningar.",
+      "Studerade relaterade områden som webbutveckling, databaser och IT-säkerhet.",
+      "Lärde mig planera och genomföra projekt enligt metoder som Agile och DevOps.",
+      "Utvecklade förmåga att felsöka och lösa problem kopplade till systemutveckling i molnmiljöer."
     ]
   },
   {
@@ -23,6 +30,12 @@ export const education = [
       "I developed practical skills in implementing and managing Azure solutions, including configuring Virtual Machines, deploying web and mobile services, implementing security measures, and optimizing costs according to budget requirements.",
       "I developed proficiency in leveraging Azure DevOps for automation, including setting up CI/CD pipelines for continuous integration and delivery, utilizing version control (e.g., Git), and understanding foundational concepts of Azure Kubernetes Service (AKS).",
       "I developed the competence to independently design and build secure, cost-optimized Azure solutions, effectively completing projects from start to finish."
+    ],
+    bulletPointsSv: [
+      "Lärde mig grunderna i Azure, inklusive tjänster för serverlös kod, webbappar och hantering av användare via Azure AD.",
+      "Arbetade praktiskt med virtuella maskiner, driftsättning av appar och säkerhetsinställningar.",
+      "Byggde och testade CI/CD-pipelines i Azure DevOps för att automatisera kodleveranser.",
+      "Fick insikt i hur man designar lösningar som både är säkra och kostnadseffektiva."
     ]
   },
   {
@@ -36,6 +49,12 @@ export const education = [
       "I developed programming skills in Go and Python, with a specific focus on applying these languages effectively for cloud service development.",
       "I developed knowledge of cloud-native architectural principles and technologies, including containerization using Docker and Kubernetes, microservices design patterns, and implementing CI/CD pipelines.",
       "I developed the practical ability to build microservices using Go and Python, developing an understanding of cloud service components, their creation, administration, and the challenges involved."
+    ],
+    bulletPointsSv: [
+      "Utbildning med fokus på containerteknik, mikrotjänster och cloud-native-arkitektur.",
+      "Arbetade med Docker och Kubernetes för att hantera och köra applikationer i containrar.",
+      "Lärde mig grunderna i mikrotjänster och hur man bygger dessa med Go och Python.",
+      "Fick praktisk erfarenhet av att skapa CI/CD-flöden och hantera moderna molnbaserade system."
     ]
   },
   {
@@ -49,6 +68,13 @@ export const education = [
       "I learned how to use key Linux development tools like compilers (gcc), build tools (make), debuggers (gdb), version control, and common text editors, and understood how static and dynamic libraries work.",
       "I learned how to write simple scripts to help with system upkeep and building applications.",
       "I learned the basics of creating simple programs with graphical interfaces in Linux and how to package them for others to use."
+    ],
+    bulletPointsSv: [
+      "Universitetskurs om hur Linux används i utvecklingsarbete.",
+      "Använde terminalkommandon för att arbeta i Linux-miljö och hantera systemresurser.",
+      "Arbetade med utvecklingsverktyg som gcc, make, gdb, Git och textredigerare.",
+      "Skrev enklare skript och byggde mindre applikationer med grafiskt gränssnitt i Linux.",
+      "Lärde mig paketera program för att kunna delas och installeras av andra användare."
     ]
   },
   {
@@ -62,6 +88,13 @@ export const education = [
       "I am gaining practical knowledge of key networking protocols and technologies, including Spanning Tree Protocol (STP), OSPF routing, NAT, Access Control Lists (ACLs), VPNs, link aggregation, QoS concepts, and various WAN technologies.",
       "I am developing skills in network design, administration, and troubleshooting, learning how to set up enterprise networks and apply security best practices.",
       "I am learning about modern networking concepts like Software-Defined Networking (SDN) and the use of APIs for configuration, understanding how this course contributes significantly towards the knowledge required for a CCNA certification."
+    ],
+    bulletPointsSv: [
+      "Universitetskurs i nätverksteknik med fokus på design, konfiguration och säkerhet.",
+      "Lär mig bygga nätverk med routrar och switchar och skapa strukturerade nätverkstopologier.",
+      "Arbetar med tekniker som OSPF, NAT, VPN, STP, ACL och QoS.",
+      "Övar på att konfigurera och felsöka nätverk samt använda moderna metoder som Software-Defined Networking (SDN) och API:er för nätverksstyrning.",
+      "Får kunskap som förbereder inför certifieringar som t.ex. CCNA."
     ]
   }
 ];

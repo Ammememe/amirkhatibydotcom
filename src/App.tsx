@@ -28,6 +28,11 @@ function App() {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const currentProject = projects[currentProjectIndex];
 
+  // Add effect to scroll to top when section changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [activeSection]);
+
   // Add form state and handlers for EmailJS
   const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState({
@@ -202,19 +207,27 @@ function App() {
                     <p className={`${theme === 'light' ? 'text-gray-700 group-hover:text-black' : 'text-gray-500 group-hover:text-white'} transition-all duration-300 mb-3`}>{item.title}</p>
                     
                     {/* Display bullet points if they exist */}
-                    {(item.bulletPoints || item.bulletPointsSv) && (
+                    {item.bulletPoints && (
                       <ul className="mt-2 space-y-2">
-                        {(theme === 'light' ? item.bulletPointsSv : item.bulletPoints).map((point, idx) => (
-                          <li key={idx} className={`flex items-start ${theme === 'light' ? 'text-gray-700 group-hover:text-black' : 'text-gray-500 group-hover:text-white'} transition-all duration-300`}>
-                            <span className={`inline-block w-2 h-2 rounded-full ${theme === 'light' ? 'bg-orange-500' : 'bg-white'} mr-2 mt-2 flex-shrink-0`}></span>
-                            <span>{point}</span>
-                          </li>
-                        ))}
+                        {(() => {
+                          // Use type assertion to handle the theme comparison
+                          const isLightTheme = theme as string === 'light';
+                          const pointsToDisplay = isLightTheme && item.bulletPointsSv 
+                            ? item.bulletPointsSv 
+                            : item.bulletPoints;
+                          
+                          return pointsToDisplay.map((point, idx) => (
+                            <li key={idx} className={`flex items-start ${isLightTheme ? 'text-gray-700 group-hover:text-black' : 'text-gray-500 group-hover:text-white'} transition-all duration-300`}>
+                              <span className={`inline-block w-2 h-2 rounded-full ${isLightTheme ? 'bg-orange-500' : 'bg-white'} mr-2 mt-2 flex-shrink-0`}></span>
+                              <span>{point}</span>
+                            </li>
+                          ));
+                        })()}
                       </ul>
                     )}
                   </div>
                 </div>
-          </div>
+              </div>
             ))}
           </div>
         </div>
@@ -519,12 +532,20 @@ function App() {
                     {/* Display bullet points if they exist */}
                     {item.bulletPoints && (
                       <ul className="mt-2 space-y-2">
-                        {item.bulletPoints.map((point, idx) => (
-                          <li key={idx} className={`flex items-start ${theme === 'light' ? 'text-gray-700 group-hover:text-black' : 'text-gray-500 group-hover:text-white'} transition-all duration-300`}>
-                            <span className={`inline-block w-2 h-2 rounded-full ${theme === 'light' ? 'bg-orange-500' : 'bg-white'} mr-2 mt-2 flex-shrink-0`}></span>
-                            <span>{point}</span>
-                          </li>
-                        ))}
+                        {(() => {
+                          // Use type assertion to handle the theme comparison
+                          const isLightTheme = theme as string === 'light';
+                          const pointsToDisplay = isLightTheme && item.bulletPointsSv 
+                            ? item.bulletPointsSv 
+                            : item.bulletPoints;
+                          
+                          return pointsToDisplay.map((point, idx) => (
+                            <li key={idx} className={`flex items-start ${isLightTheme ? 'text-gray-700 group-hover:text-black' : 'text-gray-500 group-hover:text-white'} transition-all duration-300`}>
+                              <span className={`inline-block w-2 h-2 rounded-full ${isLightTheme ? 'bg-orange-500' : 'bg-white'} mr-2 mt-2 flex-shrink-0`}></span>
+                              <span>{point}</span>
+                            </li>
+                          ));
+                        })()}
                       </ul>
                     )}
                   </div>
