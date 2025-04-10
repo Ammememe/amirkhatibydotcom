@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload Helper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .instructions {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .file-input {
+            margin: 20px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Profile Image Upload Helper</h1>
+    
+    <div class="instructions">
+        <h2>Instructions:</h2>
+        <ol>
+            <li>Click the "Choose File" button below</li>
+            <li>Select your profile image (the one from the chat)</li>
+            <li>Click the "Save to public/images" button</li>
+            <li>The image will be saved as "profile.jpg" in the public/images folder</li>
+            <li>Return to your app and refresh to see the changes</li>
+        </ol>
+    </div>
+    
+    <div class="file-input">
+        <input type="file" id="imageInput" accept="image/*">
+    </div>
+    
+    <button id="saveButton">Save to public/images</button>
+    
+    <div id="result" style="margin-top: 20px;"></div>
+    
+    <script>
+        document.getElementById('saveButton').addEventListener('click', function() {
+            const fileInput = document.getElementById('imageInput');
+            const resultDiv = document.getElementById('result');
+            
+            if (fileInput.files.length === 0) {
+                resultDiv.innerHTML = 'Please select a file first.';
+                return;
+            }
+            
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                
+                img.onload = function() {
+                    try {
+                        // Create a directory if it doesn't exist
+                        // This is a client-side script, so we can't directly create directories
+                        // Just giving instructions instead
+                        
+                        // Create a download link
+                        const a = document.createElement('a');
+                        a.href = e.target.result;
+                        a.download = 'profile.jpg';
+                        a.click();
+                        
+                        resultDiv.innerHTML = '<strong>Image downloaded!</strong><br>' +
+                            'Please move this file to your project\'s public/images folder.<br>' +
+                            'Path: <code>public/images/profile.jpg</code>';
+                    } catch (error) {
+                        resultDiv.innerHTML = 'Error: ' + error.message;
+                    }
+                };
+            };
+            
+            reader.readAsDataURL(file);
+        });
+    </script>
+</body>
+</html> 
